@@ -47,15 +47,6 @@
           }
         }
       },
-      "podAnnotations": {
-        "type": "object"
-      },
-      "podSecurityContext": {
-        "type": "object"
-      },
-      "securityContext": {
-        "type": "object"
-      },
       "service": {
         "type": "object",
         "properties": {
@@ -164,10 +155,7 @@
               "kubernetes.io/ingress.class": {
                 "type": "string"
               }
-            },
-            "required": [
-              "kubernetes.io/ingress.class"
-            ]
+            }
           },
           "host": {
             "type": "string"
@@ -187,11 +175,7 @@
                   "name": {
                     "type": "null"
                   }
-                },
-                "required": [
-                  "create",
-                  "name"
-                ]
+                }
               },
               "cert": {
                 "type": "string"
@@ -246,16 +230,6 @@
             "type": "integer"
           }
         }
-      },
-      "nodeSelector": {
-        "type": "object"
-      },
-      "tolerations": {
-        "type": "array",
-        "items": {}
-      },
-      "affinity": {
-        "type": "object"
       }
     }
   }
