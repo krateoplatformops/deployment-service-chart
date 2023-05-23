@@ -94,39 +94,6 @@
           }
         }
       },
-      "podEnvFrom": {
-        "type": "array",
-        "items": {
-          "anyOf": [
-            {
-              "type": "object",
-              "properties": {
-                "configMapRef": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "type": "object",
-              "properties": {
-                "secretRef": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
       "podEnv": {
         "type": "array",
         "items": {
