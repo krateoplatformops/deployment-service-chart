@@ -1,197 +1,197 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "type": "object",
-    "properties": {
-      "replicaCount": {
-        "type": "integer"
-      },
-      "labels": {
-        "type": "object",
-        "properties": {
-          "component": {
-            "type": "string"
-          }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "replicaCount": {
+      "type": "integer"
+    },
+    "labels": {
+      "type": "object",
+      "properties": {
+        "component": {
+          "type": "string"
         }
-      },
-      "image": {
-        "type": "object",
-        "properties": {
-          "repository": {
-            "type": "string"
-          },
-          "pullPolicy": {
-            "type": "string"
-          },
-          "tag": {
-            "type": "string"
-          }
+      }
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string"
+        },
+        "pullPolicy": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
         }
-      },
-      "nameOverride": {
-        "type": "string"
-      },
-      "fullnameOverride": {
-        "type": "string"
-      },
-      "serviceAccount": {
-        "type": "object",
-        "properties": {
-          "create": {
-            "type": "boolean"
-          },
-          "name": {
-            "type": "string"
-          }
+      }
+    },
+    "nameOverride": {
+      "type": "string"
+    },
+    "fullnameOverride": {
+      "type": "string"
+    },
+    "serviceAccount": {
+      "type": "object",
+      "properties": {
+        "create": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
         }
-      },
-      "service": {
-        "type": "object",
-        "properties": {
-          "create": {
-            "type": "boolean"
-          },
-          "type": {
-            "type": "string"
-          },
-          "http": {
-            "type": "object",
-            "properties": {
-              "port": {
-                "type": "integer"
-              },
-              "targetPort": {
-                "type": "integer"
-              }
-            }
-          },
-          "ssh": {
-            "type": "object",
-            "properties": {
-              "enabled": {
-                "type": "boolean"
-              }
-            }
-          }
-        }
-      },
-      "podContainerPorts": {
-        "type": "array",
-        "items": {
+      }
+    },
+    "service": {
+      "type": "object",
+      "properties": {
+        "create": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "http": {
           "type": "object",
           "properties": {
-            "name": {
-              "type": "string"
-            },
-            "containerPort": {
+            "port": {
               "type": "integer"
             },
-            "protocol": {
-              "type": "string"
+            "targetPort": {
+              "type": "integer"
             }
           }
-        }
-      },
-      "podEnv": {
-        "type": "array",
-        "items": {
+        },
+        "ssh": {
           "type": "object",
           "properties": {
-            "name": {
-              "type": "string"
-            },
-            "value": {
-              "type": "string"
+            "enabled": {
+              "type": "boolean"
             }
           }
         }
-      },
-      "ingress": {
+      }
+    },
+    "podContainerPorts": {
+      "type": "array",
+      "items": {
         "type": "object",
         "properties": {
-          "enabled": {
-            "type": "boolean"
-          },
-          "annotations": {
-            "type": "object",
-            "properties": {
-              "kubernetes.io/ingress.class": {
-                "type": "string"
-              }
-            }
-          },
-          "host": {
+          "name": {
             "type": "string"
           },
-          "tls": {
-            "type": "object",
-            "properties": {
-              "enabled": {
-                "type": "boolean"
-              },
-              "secret": {
-                "type": "object",
-                "properties": {
-                  "create": {
-                    "type": "boolean"
-                  },
-                  "name": {
-                    "type": "null"
-                  }
+          "containerPort": {
+            "type": "integer"
+          },
+          "protocol": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "podEnv": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ingress": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "annotations": {
+          "type": "object",
+          "properties": {
+            "kubernetes.io/ingress.class": {
+              "type": "string"
+            }
+          }
+        },
+        "host": {
+          "type": "string"
+        },
+        "tls": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "secret": {
+              "type": "object",
+              "properties": {
+                "create": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "type": "null"
                 }
-              },
-              "cert": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
               }
+            },
+            "cert": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
             }
           }
         }
-      },
-      "resources": {
-        "type": "object",
-        "properties": {
-          "requests": {
-            "type": "object",
-            "properties": {
-              "memory": {
-                "type": "string"
-              },
-              "cpu": {
-                "type": "string"
-              }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "requests": {
+          "type": "object",
+          "properties": {
+            "memory": {
+              "type": "string"
+            },
+            "cpu": {
+              "type": "string"
             }
-          },
-          "limits": {
-            "type": "object",
-            "properties": {
-              "memory": {
-                "type": "string"
-              },
-              "cpu": {
-                "type": "string"
-              }
+          }
+        },
+        "limits": {
+          "type": "object",
+          "properties": {
+            "memory": {
+              "type": "string"
+            },
+            "cpu": {
+              "type": "string"
             }
           }
         }
-      },
-      "autoscaling": {
-        "type": "object",
-        "properties": {
-          "enabled": {
-            "type": "boolean"
-          },
-          "minReplicas": {
-            "type": "integer"
-          },
-          "maxReplicas": {
-            "type": "integer"
-          },
-          "targetCPUUtilizationPercentage": {
-            "type": "integer"
-          }
+      }
+    },
+    "autoscaling": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "minReplicas": {
+          "type": "integer"
+        },
+        "maxReplicas": {
+          "type": "integer"
+        },
+        "targetCPUUtilizationPercentage": {
+          "type": "integer"
         }
       }
     }
   }
+}
