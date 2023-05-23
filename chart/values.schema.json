@@ -79,66 +79,67 @@
       },
       "podContainerPorts": {
         "type": "array",
-        "items":
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "containerPort": {
-                "type": "integer"
-              },
-              "protocol": {
-                "type": "string"
-              }
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "containerPort": {
+              "type": "integer"
+            },
+            "protocol": {
+              "type": "string"
             }
           }
+        }
       },
       "podEnvFrom": {
         "type": "array",
-        "items":
-          {
-            "type": "object",
-            "properties": {
-              "configMapRef": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
+        "items": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "configMapRef": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "properties": {
+                "secretRef": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
                   }
                 }
               }
             }
-          },
-          {
-            "type": "object",
-            "properties": {
-              "secretRef": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
+          ]
+        }
       },
       "podEnv": {
         "type": "array",
-        "items": 
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
             }
           }
+        }
       },
       "ingress": {
         "type": "object",
