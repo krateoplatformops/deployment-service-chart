@@ -79,7 +79,7 @@
       },
       "podContainerPorts": {
         "type": "array",
-        "items": [
+        "items":
           {
             "type": "object",
             "properties": {
@@ -94,11 +94,10 @@
               }
             }
           }
-        ]
       },
       "podEnvFrom": {
         "type": "array",
-        "items": [
+        "items":
           {
             "type": "object",
             "properties": {
@@ -125,11 +124,10 @@
               }
             }
           }
-        ]
       },
       "podEnv": {
         "type": "array",
-        "items": [
+        "items": 
           {
             "type": "object",
             "properties": {
@@ -141,7 +139,6 @@
               }
             }
           }
-        ]
       },
       "ingress": {
         "type": "object",
