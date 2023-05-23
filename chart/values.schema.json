@@ -39,9 +39,6 @@
           "create": {
             "type": "boolean"
           },
-          "annotations": {
-            "type": "object"
-          },
           "name": {
             "type": "string"
           }
