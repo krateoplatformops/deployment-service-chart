@@ -4,8 +4,8 @@ description: Krateo PlatformOps Deployment Service
 type: application
 icon: "https://github.com/krateoplatformops/community/blob/main/logos/black/icon.svg"
 
-version: 1.2.34
-appVersion: 1.2.25
+version: 1.2.35
+appVersion: 1.2.26
 
 dependencies:
   - name: helm-chart-library
